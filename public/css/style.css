@@ -106,7 +106,13 @@ body {
 /* Show page */
 
 .show-img {
-  height: 30vh;
+  max-height: 100vh;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain !important;
+  display: block;
+  margin: 0 auto;
 }
 .btns {
   display: flex;
