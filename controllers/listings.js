@@ -5,7 +5,7 @@ module.exports.index = async (req, res) => {
   const allListings = await Listing.find({});
   res.render("listings/index.ejs", { allListings });
 };
-//async function whose task is to render all listings
+//async function to render all listings
 
 //new
 
@@ -21,7 +21,6 @@ module.exports.showListing = async (req, res) => {
     .populate({
       path: "reviews",
       populate: {
-        //nested populate because reviews is in reviews array not parent document
         path: "author",
       },
     })
@@ -69,7 +68,7 @@ module.exports.updateListing = async (req, res) => {
   let { id } = req.params;
   let listing = await Listing.findByIdAndUpdate(id, { ...req.body.listing });
 
-  //logic for image upload
+  // for image upload
 
   if (typeof req.file !== "undefined") {
     let url = req.file.path;
