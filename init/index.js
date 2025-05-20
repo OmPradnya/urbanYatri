@@ -22,7 +22,7 @@ const initDB = async () => {
     ...obj,
     owner: "6808ea7114fdab5e15c59d8f",
   }));
-  //above is to access data array, map creates new array
+ 
   await Listing.insertMany(initData.data);
   console.log("data was initialised");
 };
