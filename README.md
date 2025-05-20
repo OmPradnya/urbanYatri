@@ -6,9 +6,14 @@ Developed and deployed a fullstack project on Render to list and rent unique sta
 
 ---
 
+## 🌐 Usage
+
+Visit: [urbanYatri](https://urbanyatri.onrender.com/listings)
+
+---
+
 ## 🚀 Installation
 
-> Live [urbanYatri](https://urbanyatri.onrender.com/listings).  
 > **Note**: You may need to configure environment variables, databases, and cloud services If you want to run it locally.
 
 ```bash
@@ -17,12 +22,6 @@ cd urbanYatri
 npm install
 node app.js
 ```
-
----
-
-## 🌐 Usage
-
-Visit: [urbanYatri](https://urbanyatri.onrender.com/listings)
 
 ---
 
