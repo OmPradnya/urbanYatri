@@ -22,7 +22,6 @@ const userRouter = require("./routes/user.js");
 
 const port = 8080;
 
-// const MONGO_URL = "mongodb://127.0.0.1:27017/urbanYatri";
 const dbURL = process.env.ATLASDB_URL;
 
 main()
@@ -68,10 +67,6 @@ const sessionOptions = {
   },
 };
 
-// app.get("/", (req, res) => {
-//   res.send(" root working");
-// });
-
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -89,33 +84,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.get("/demouser", async (req, res) => {
-//   let fakeUser = new User({
-//     email: "student@gmail.com",
-//     username: "delta-student", //mongoose automatically adds username
-//   });
-
-//   let registeredUser = await User.register(fakeUser, "helloworld"); //static method
-//   res.send(registeredUser);
-// });
-
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
-
-// app.get("/testListing", async (req, res) => {
-//   let sampleListing = new Listing({
-//     title: "My New Villa",
-//     description: "In the mountains",
-//     price: 1200,
-//     location: "Dalhoussie",
-//     Country: "India",
-//   });
-
-//   await sampleListing.save();
-//   console.log("sample was saved");
-//   res.send("successfull testing");
-// });
 
 app.all(/.*/, (req, res, next) => {
   next(new ExpressError(404, "Page Not Found"));
