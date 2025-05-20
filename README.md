@@ -8,8 +8,8 @@ Developed and deployed a fullstack project on Render to list and rent unique sta
 
 ## 🚀 Installation
 
-> **Note**: Live [urbanYatri](https://urbanyatri.onrender.com/listings).  
-> You may need to configure environment variables, databases, and cloud services If you want to run it locally.
+> Live [urbanYatri](https://urbanyatri.onrender.com/listings).  
+> **Note**: You may need to configure environment variables, databases, and cloud services If you want to run it locally.
 
 ```bash
 git clone https://github.com/OmPradnya/urbanYatri
