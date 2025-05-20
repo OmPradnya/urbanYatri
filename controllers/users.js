@@ -33,10 +33,10 @@ module.exports.renderLoginForm = (req, res) => {
 
 module.exports.login = async (req, res) => {
   req.flash("success", "Welcome back to urbanYatri! Successfully Logged in");
-  // to redirect to listings after directly login (otherwise page not found)
+ 
   let redirectUrl = res.locals.redirectUrl || "/listings";
   res.redirect(redirectUrl);
-}; //actual login is done by passport, this is post login logic
+}; 
 
 module.exports.logout = (req, res, next) => {
   req.logout((err) => {
