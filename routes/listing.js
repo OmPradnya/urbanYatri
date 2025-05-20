@@ -19,8 +19,6 @@ router.route("/").get(wrapAsync(listingController.index)).post(
 //---------------------New Route---------------
 
 router.get("/new", isLoggedIn, listingController.renderNewForm);
-//if new is to be written after the below router.route logic
-//will interpret new as id, and search new in DB
 
 //---------------------Update------------------------------
 router
